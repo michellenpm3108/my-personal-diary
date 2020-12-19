@@ -4,12 +4,20 @@ const submitBtn = document.querySelector('btn')
 const entrySection = document.getElementById('entry-section')
 
 
-function addEntryToDom(event){
+// function addEntryToDom(event){
+//     event.preventDefault()
+//     let newEntry = document.createElement('div')
+//     newEntry.className = 'single-entry'
+//     newEntry.textContent= entryTextbox.value
+//     entrySection.append(newEntry)
+// }
+// entryForm.addEventListener('submit', addEntryToDom)
+
+function addEntryToDom(event) {
     event.preventDefault()
     let newEntry = document.createElement('div')
-    newEntry.className = 'single-entry'
-    newEntry.textContent= entryTextbox.value
+    newEntry.textContent = entryTextbox.value
+    newEntry.className = 'new-entry'
     entrySection.append(newEntry)
 }
 entryForm.addEventListener('submit', addEntryToDom)
-
