@@ -56,5 +56,14 @@ form {
     margin: 2em 0;
     width: 60vw;
     padding: 1em;
-    color: white;
+    color:white;
+    background:rgb(179, 75, 122);
+}
+.entryBtn{
+    width: 1em;
+    height: 1em;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+    border: none;
 }
