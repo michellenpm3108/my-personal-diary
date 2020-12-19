@@ -46,12 +46,15 @@ form {
     background:  rgb(221, 95, 152);
     color: white;
 }
-
-.new-entry{
-    height: 20vh;
+.btn:hover,
+.btn:focus {
+    border: none;
+    background: white;
+    color: rgb(221, 95, 152);
+}
+.entrysection {
     margin: 2em 0;
     width: 60vw;
     padding: 1em;
     color: white;
-
 }

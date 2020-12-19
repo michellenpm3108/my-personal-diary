@@ -1,1 +1,5 @@
- prevents the page from reloading whenever the submit button is clicked.
+ submit button clicked: 
+ prevent page reload (even.preventDefault())
+ add user's input to DOM (createElement() & append())
+ clear entry textbox (.value)
+ hide user entry by default (display style)

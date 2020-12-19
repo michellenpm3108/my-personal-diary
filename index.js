@@ -15,9 +15,11 @@ const entrySection = document.getElementById('entry-section')
 
 function addEntryToDom(event) {
     event.preventDefault()
-    let newEntry = document.createElement('div')
-    newEntry.textContent = entryTextbox.value
-    newEntry.className = 'new-entry'
-    entrySection.append(newEntry)
+    let newEntryDiv = document.createElement('div')
+    newEntryDiv.textContent = entryTextbox.value
+    newEntryDiv.className = 'new-entry'
+    // newEntryDiv.style.display = 'none'
+    entrySection.append(newEntryDiv)
+    entryTextbox.value = ''
 }
 entryForm.addEventListener('submit', addEntryToDom)
