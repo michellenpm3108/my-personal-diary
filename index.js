@@ -3,6 +3,8 @@ const entryTextbox = document.querySelector('.entry-textbox')
 const entrySection = document.querySelector('.entry-section')
 const entryButtonSection = document.querySelector('.entry-btn-section')
 let count=1
+
+
 entryForm.addEventListener('submit', function(event) {
     event.preventDefault();
     const entryDiv = document.createElement('div');
@@ -18,10 +20,11 @@ entryForm.addEventListener('submit', function(event) {
     entryButtonSection.append(entryButton)
     count++
 
-    const singleEntry = document.querySelectorAll('.single-entry')
+    
     entryButton.addEventListener('click', function(){
-        for (let index = 0 ; index < singleEntry.length ; index++) {
-            singleEntry[index].style.display = 'none'
+        const allEntries = document.querySelectorAll('.single-entry')
+        for (let index = 0 ; index < allEntries.length ; index++) {
+            allEntries[index].style.display = 'none'
         }
         entryDiv.style.display='block'
     })

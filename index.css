@@ -29,9 +29,11 @@ form {
 .entry-textbox {
     font-family: 'Nunito', sans-serif;
     padding: 1em;
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
     border: none;
     width: 60vw;
+    border-radius: 1em;
+
 }
 .entry-textbox:focus {
     outline: none;
@@ -55,9 +57,10 @@ form {
 .entry-section {
     margin: 2em 0;
     width: 60vw;
-    padding: 1em;
+    padding: 2em;
     color:white;
     background:rgb(179, 75, 122);
+    border-radius: 1em;
 }
 .entry-btn-section {
     display: grid;
