@@ -59,22 +59,28 @@ form {
     color:white;
     background:rgb(179, 75, 122);
 }
+.entry-btn-section {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(3em, 1fr));
+}
 .entry-btn{
     width: 3em;
     height: 3em;
     border-radius: 10px;
     border: none;
     background: rgb(250, 157, 199);
-    margin-right: .5em;
-    margin-bottom: 1em;
+    margin: 0 .5em 1em;
     font-family: 'Nunito', sans-serif;
     color: white;
 }
-.entry-btn:hover{
+.entry-btn:hover,
+.entry-btn:focus{
     outline: none;
     cursor: pointer;
     border: none;
 }
 .single-entry {
+    font-size: .75rem;
 
 }
