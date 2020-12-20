@@ -1,20 +1,31 @@
 const entryForm = document.getElementById('entry-form')
-const entryTextbox = document.getElementById('entry-textbox')
-const submitBtn = document.querySelector('btn')
-const entrySection = document.getElementById('entry-section')
-const entryBtnSection = document.getElementById('entryBtnSection')
+const entryTextbox = document.querySelector('.entry-textbox')
+const entrySection = document.querySelector('.entry-section')
+const entryButtonSection = document.querySelector('.entry-btn-section')
+let count=1
+entryForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const entryDiv = document.createElement('div');
+    entryDiv.innerText = entryTextbox.value;
+    entryDiv.style.display = 'none';
+    entryDiv.className = 'single-entry';
+    entrySection.append(entryDiv);
+    entryTextbox.value='';
 
+    const entryButton = document.createElement('button')
+    entryButton.innerText = 'Day ' + count
+    entryButton.className = 'entry-btn'
+    entryButtonSection.append(entryButton)
+    count++
 
-function addEntryToDom(event) {
-    event.preventDefault()
-    let newEntryDiv = document.createElement('div')
-    newEntryDiv.textContent = entryTextbox.value
-    newEntryDiv.className = 'new-entry'
-    newEntryDiv.style.display = 'none'
-    entrySection.append(newEntryDiv)
-    entryTextbox.value = ''
-    let entryBtn = document.createElement('button')
-    entryBtn.className = 'entryBtn'
-    entryBtnSection.append(entryBtn)
-}
-entryForm.addEventListener('submit', addEntryToDom)
+    const singleEntry = document.querySelectorAll('.single-entry')
+    entryButton.addEventListener('click', function(){
+        for (let index = 0 ; index < singleEntry.length ; index++) {
+            singleEntry[index].style.display = 'none'
+        }
+        entryDiv.style.display='block'
+    })
+
+    
+
+})

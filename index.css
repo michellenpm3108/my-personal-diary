@@ -36,7 +36,7 @@ form {
 .entry-textbox:focus {
     outline: none;
 }
-.btn {
+.submit-btn {
     font-family: 'Nunito', sans-serif;
     text-transform: uppercase;
     letter-spacing: .2em;
@@ -46,24 +46,35 @@ form {
     background:  rgb(221, 95, 152);
     color: white;
 }
-.btn:hover,
-.btn:focus {
+.submit-btn:hover,
+.submit-btn:focus {
     border: none;
     background: white;
     color: rgb(221, 95, 152);
 }
-.entrysection {
+.entry-section {
     margin: 2em 0;
     width: 60vw;
     padding: 1em;
     color:white;
     background:rgb(179, 75, 122);
 }
-.entryBtn{
-    width: 1em;
-    height: 1em;
+.entry-btn{
+    width: 3em;
+    height: 3em;
     border-radius: 10px;
-    background: white;
+    border: none;
+    background: rgb(250, 157, 199);
+    margin-right: .5em;
+    margin-bottom: 1em;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+}
+.entry-btn:hover{
+    outline: none;
     cursor: pointer;
     border: none;
+}
+.single-entry {
+
 }
