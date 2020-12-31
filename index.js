@@ -5,18 +5,19 @@ const entryBtnSection = document.querySelector('.entry-btn-section')
 let count = 1
 
 entryForm.addEventListener('submit', function(event){
-    event.preventDefault(event);
+    event.preventDefault();
     if (entryTextbox.value) {
         const entryDiv = document.createElement('div');
-        entryDiv.textContent = entryTextbox.value;
-        entryDiv.classList='single-entry'
+        entryDiv.innerText = entryTextbox.value;
+        entryDiv.className = 'single-entry'
         entrySection.append(entryDiv)
 
         entryTextbox.value=''
         entryDiv.style.display='none'
 
         const entryBtn = document.createElement('button')
-        entryBtn.textContent = 'day ' + count
+        entryBtn.innerText = 'day ' + count
+        entryBtn.className = "entry-btn"
         count++
         entryBtnSection.append(entryBtn)
 
